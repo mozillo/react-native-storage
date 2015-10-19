@@ -17,7 +17,7 @@ export default class Storage {
 
     //detect browser or ios javascriptCore
     me.isBrowser = false;
-    if(window && window.localStorage) {
+    if(typeof window != 'undefined' && window.localStorage) {
       try {
         window.localStorage.setItem('test', 'test');
         me._s = window.localStorage;
